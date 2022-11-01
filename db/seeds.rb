@@ -1,93 +1,92 @@
 require 'faker'
 
 puts 'Clearing Database...'
-User.destroy_all
 Challenge.destroy_all
+User.destroy_all
 
 puts 'Creating Users...'
 
 user1 = User.create(
   name: "serenity",
   email: "cwamono@gmail.com",
-  encrypted_password: 'user100'
+  password: 'user100'
 )
 
-# user2 = User.create(
-#   name: "kikmaker",
-#   email: "cheekylilkiki@gmail.com",
-#   encrypted_password: 'user2'
-# )
+user2 = User.create(
+  name: "kikmaker",
+  email: "cheekylilkiki@gmail.com",
+  password: 'user200'
+)
 
-# user3 = User.create(
-#   name: "special-Chris",
-#   email: "specialc@gmail.com",
-#   encrypted_password: 'user3'
-# )
+user3 = User.create(
+  name: "special-Chris",
+  email: "specialc@gmail.com",
+  password: 'user300'
+)
 
-# user4 = User.create(
-#   name: "Stickalicious",
-#   email: "stricko@gmail.com",
-#   encrypted_password: 'user4'
-# )
+user4 = User.create(
+  name: "Stickalicious",
+  email: "stricko@gmail.com",
+  password: 'user400'
+)
 
-# user5 = User.create(
-#   name: "backflip-Joe",
-#   email: "jumpingjoe@gmail.com",
-#   encrypted_password: 'user5'
-# )
+user5 = User.create(
+  name: "backflip-Joe",
+  email: "jumpingjoe@gmail.com",
+  password: 'user500'
+)
 
-# user6 = User.create(
-#   name: "Liquid-G",
-#   email: "gabriella@gmail.com",
-#   encrypted_password: 'user6'
-# )
+user6 = User.create(
+  name: "Liquid-G",
+  email: "gabriella@gmail.com",
+  password: 'user600'
+)
 
-# user7 = User.create(
-#   name: "DOM-inator",
-#   email: "domwalsh@gmail.com",
-#   encrypted_password: 'user7'
-# )
+user7 = User.create(
+  name: "DOM-inator",
+  email: "domwalsh@gmail.com",
+  password: 'user700'
+)
 
-# user8 = User.create(
-#   name: "T-diddy",
-#   email: "tracys@gmail.com",
-#   encrypted_password: 'user8'
-# )
+user8 = User.create(
+  name: "T-diddy",
+  email: "tracys@gmail.com",
+  password: 'user800'
+)
 
-# user9 = User.create(
-#   name: "Uncle Joe",
-#   email: "joedrey@gmail.com",
-#   encrypted_password: 'user9'
-# )
+user9 = User.create(
+  name: "Uncle Joe",
+  email: "joedrey@gmail.com",
+  password: 'user900'
+)
 
-# user10 = User.create(
-#   name: "TheTuude",
-#   email: "tudoroj@gmail.com",
-#   encrypted_password: 'user10'
-# )
+user10 = User.create(
+  name: "TheTuude",
+  email: "tudoroj@gmail.com",
+  password: 'user1000'
+)
 
-# user11 = User.create(
-#   name: "Herr Nico",
-#   email: "wiconico@gmail.com",
-#   encrypted_password: 'user11'
-# )
+user11 = User.create(
+  name: "Herr Nico",
+  email: "wiconico@gmail.com",
+  password: 'user1100'
+)
 
-# user12 = User.create(
-#   name: "Rogue Roux",
-#   email: "rudeboi@gmail.com",
-#   encrypted_password: 'user12'
-# )
+user12 = User.create(
+  name: "Rogue Roux",
+  email: "rudeboi@gmail.com",
+  password: 'user1200'
+)
 
-# puts 'Creating Challenges...'
+puts 'Creating Challenges...'
 
-p user1
 10.times do
   Challenge.create(
     title: Faker::Company.catch_phrase,
     description: Faker::Lorem.sentences,
     category: ["Ruby", "OOP", "DB", "Front", "Rails"].sample,
     duration: ["Challenge", "Full day", "Module"].sample,
-    user_id: User.all.sample
+    user_id: User.all.sample.id
   )
 end
 p Challenge.last
