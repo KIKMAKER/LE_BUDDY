@@ -82,7 +82,7 @@ puts 'Creating Challenges...'
 
 10.times do
   Challenge.create(
-    title: Faker::Company.catch_phrase,
+    title: ["Ruby", "OOP", "DB", "Front", "Rails"].sample,
     description: Faker::Lorem.sentences,
     category: ["Ruby", "OOP", "DB", "Front", "Rails"].sample,
     duration: ["Challenge", "Full day", "Module"].sample,
