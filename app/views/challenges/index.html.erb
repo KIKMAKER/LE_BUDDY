@@ -1,16 +1,21 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-</div>
+
   <div class="container">
-    <h1>View All Challenges</h1>
-    <p>Find a buddy to work on Le Wagon challenges</p>
-    <p><%= link_to "New Challenge", new_challenge_path, class: "btn btn-flat" %></p>
+    <h1>All Challenges</h1>
   </div>
 
 <div class="container mt-4">
   <div class="cards">
-    <% @challenges.all do |challenge| %>
-        <%= challenge.title %>
+     <% @challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= challenge.title %>
+          <%= challenge.category %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
+
+    <p>Find a buddy to work on Le Wagon challenges</p>
+    <p><%= link_to "New Challenge", new_challenge_path, class: "btn btn-flat" %></p>
