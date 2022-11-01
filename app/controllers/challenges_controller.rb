@@ -14,7 +14,7 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.new(challenges_params)
     @challenge.user = current_user
-    
+
     if @challenge.save
       redirect_to challenge_path(@challenge)
     else
@@ -23,8 +23,9 @@ class ChallengesController < ApplicationController
   end
 
   def destroy
-    @challenge = Challenge.find(challenges_params)
+    @challenge = Challenge.find(params[:id])
     @challenge.destroy
+    redirect_to challenges_path
   end
 
   private
