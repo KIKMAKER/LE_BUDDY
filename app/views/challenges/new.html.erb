@@ -2,8 +2,8 @@
 <%= simple_form_for @challenge do |f| %>
 <%= f.input :title %>
 <%= f.input :description %>
-<%= f.input :category %>
-<%= f.input :duration %>
+<%= f.input :category, :collection => %w[Ruby OOP DB Front Rails] %>
+<%= f.input :duration, :collection => %w[Challenge FullDay Module] %>
 <%= f.button :submit %>
 
 <% end %>

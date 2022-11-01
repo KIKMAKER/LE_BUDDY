@@ -14,14 +14,12 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.new(challenges_params)
     @challenge.user = current_user
-    @challenge.save
-    redirect_to challenge_path(@challenge)
-
-    # if @challenge.save
-    #   redirect_to challenge_path(@challenge)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    
+    if @challenge.save
+      redirect_to challenge_path(@challenge)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
