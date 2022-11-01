@@ -13,6 +13,7 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.new(challenges_params)
+    @challenge.user = current_user
     @challenge.save
     redirect_to challenge_path(@challenge)
 
@@ -31,6 +32,6 @@ class ChallengesController < ApplicationController
   private
 
   def challenges_params
-    params.require(:challenge).permit(:title, :description, :category, :duration)
+    params.require(:challenge).permit(:title, :description, :category, :duration, :user_id)
   end
 end
