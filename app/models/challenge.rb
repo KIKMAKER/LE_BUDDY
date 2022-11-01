@@ -1,3 +1,10 @@
 class Challenge < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
+
+  validates :title, presence: true
+  validates :title, uniqueness: true
+  validates :desciption, presence: true
+  validates :category, presence: true
+  validates :duration, presence: true
+
 end
