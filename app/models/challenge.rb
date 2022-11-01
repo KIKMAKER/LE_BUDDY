@@ -3,8 +3,7 @@ class Challenge < ApplicationRecord
 
   validates :title, presence: true
   validates :title, uniqueness: true
-  validates :desciption, presence: true
+  validates :description, presence: true
   validates :category, presence: true
   validates :duration, presence: true
-
 end
