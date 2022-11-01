@@ -4,15 +4,17 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @challenge = Challenge.find(params[:challenge_id])
     @booking = Booking.new
   end
 
   def create
+    @challenge = Challenge.find(params[:challenge_id])
     @booking = Booking.new(bookings_params)
+    @booking.challenge = @challenge
     @booking.user = current_user
-    @booking.challenge = Challenge.find(params[:id])
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to challenge_path(@challenge)
     else
       render :new, status: :unprocessable_entity
     end
