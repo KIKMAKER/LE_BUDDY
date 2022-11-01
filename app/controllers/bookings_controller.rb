@@ -9,6 +9,8 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(bookings_params)
+    @booking.user = current_user
+    @booking.challenge = Challenge.find(params[:id])
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -17,7 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:user_id])
   end
 
   def update
@@ -35,6 +37,6 @@ class BookingsController < ApplicationController
   private
 
   def bookings_params
-    params.require(:booking).permit(:start_date, :end_date, :status)
+    params.require(:booking).permit(:start_date, :end_date, :status, :user_id, :challenge_id)
   end
 end
