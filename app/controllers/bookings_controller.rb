@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @challenge = Challenge.find(params[:challenge_id])
     @booking = Booking.new
   end
 
