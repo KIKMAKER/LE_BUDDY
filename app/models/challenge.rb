@@ -8,4 +8,5 @@ class Challenge < ApplicationRecord
   # validates :category, inclusion: { within: %w[Ruby OOP DB Front Rails] }
   validates :duration, presence: true
   # validates :duration, inclusion: { within: %w[Challenge Full day Module] }
+  has_one_attached :photo
 end

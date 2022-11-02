@@ -4,6 +4,7 @@
 <%= f.input :description %>
 <%= f.input :category, :collection => %w[Ruby OOP DB Front Rails] %>
 <%= f.input :duration, :collection => %w[Challenge FullDay Module] %>
+<%= f.input :photo, as: :file %>
 <%= f.button :submit %>
 
 <% end %>

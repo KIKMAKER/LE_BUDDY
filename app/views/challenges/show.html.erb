@@ -1,17 +1,21 @@
-<h1>hey</h1>
 
-<%= @challenge.title %>
-<br>
-<%= @challenge.description %>
-<br>
-<%= @challenge.category %>
-<br>
-<%= @challenge.duration %>
-<br>
-<%= @challenge.availability %>
+<div class="container">
+  <h1>Challenge</h1>
 
-  <%= link_to challenge_path(@challenge),
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-            <i class="fa-solid fa-trash"></i>
-    
-            <% end %>
+  <%= @challenge.title %>
+  <br>
+  <%= @challenge.description %>
+  <br>
+  <%= @challenge.category %>
+  <br>
+  <%= @challenge.duration %>
+  <br>
+  <%= @challenge.availability %>
+
+    <%= link_to challenge_path(@challenge),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <i class="fa-solid fa-trash"></i>
+
+              <% end %>
+
+</div>
