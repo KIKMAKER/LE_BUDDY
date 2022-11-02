@@ -1,2 +1,27 @@
-<h1>Welcome to Le Buddy</h1>
 
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+   <h1>Welcome to Le Buddy</h1>
+    <p>Work through past challenges together.</p>
+  </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="cards">
+      <div class="card-product">
+        <% @challenges.each do |challenge| %>
+          <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
+          <div class="card-product-infos">
+            <h3> <%= challenge.title %></h3>
+            <h4><%= challenge.category %>.</h4>
+            <div>
+                <h4 class="card-trip-pricing">
+                  <%= link_to "Request to buddy-up on this challenge", new_challenge_booking_path(challenge) %></h4>
+                </div>
+          </div>
+          <% end %>
+      </div>
+    </div>
+
+  </div>

@@ -16,7 +16,7 @@ class ChallengesController < ApplicationController
     @challenge.user = current_user
 
     if @challenge.save
-      redirect_to challenge_path(@challenge)
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end

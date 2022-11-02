@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def home; end
+  def home
+    @challenges = Challenge.all
+  end
 end
