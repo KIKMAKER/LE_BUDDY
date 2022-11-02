@@ -1,39 +1,37 @@
-<div class="container">
-  <h1>DASHBOARD</h1>
-  <h3>"Hey <%= current_user.name %>"</h3>
+<div class="container justify-content-center my-3">
+  <h1>DASHBOARD</h1> <h2>"Hey <%= current_user.name %>"</h2>
 
-  <h5>Your current Challenges</h5>
-
-  <br>
-  <p>
-  <% current_user.challenges.all.each do |challenge| %>
-  <p><%= challenge.title %></p>
-  <% end %>
-
-<br>
-
-  <div class="d-flex m-5">
-    <div class="m-3">
-      <h4>Your booking requests</h4>
-        <% current_user.bookings.each do |booking| %>
-        <h5><%= booking.challenge.title %></h5>
-        <p>Requested start date:<%= booking.start_date.strftime("%c") %></p>
-        <br>
-        <p>Requested end date:<%= booking.end_date.strftime("%c") %></p>
+</div>
+<div class="container d-flex flex-column justify-content-center my-3">
+  <div class="row">
+    <div class= "col">
+      <h4>Your posted Challenges</h4>
+        <% current_user.challenges.all.each do |challenge| %>
+          <p><%= challenge.title %></p>
       <% end %>
     </div>
-    <div class="m-3">
+    <div class= "col">
       <h4>Your Challenge requests</h4>
         <% current_user.requests.each do |request| %>
         <h5><%= request.challenge.title %></h5>
-        <p><%= request.start_date.strftime("%c") %></p>
-
-        <p><%= request.end_date.strftime("%c") %></p>
-
+        <p>Requested start date:<%= request.start_date.strftime("%c") %></p>
+        <p>Requested end date:<%= request.end_date.strftime("%c") %></p>
       <% end %>
     </div>
+    <div class= "col">
+      <h4>Your Buddy requests</h4>
+        <% current_user.bookings.each do |booking| %>
+        <h5><%= booking.challenge.title %></h5>
+        <p>Requested start date:<%= booking.start_date.strftime("%c") %></p>
+        <p>Requested end date:<%= booking.end_date.strftime("%c") %></p>
 
+      <% end %>
   </div>
+</div>
+
+
+
+
 
 </div>
 
