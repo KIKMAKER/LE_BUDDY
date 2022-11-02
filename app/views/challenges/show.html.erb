@@ -1,10 +1,13 @@
-<div class="container justify-content">
 
-      <h1><%= @challenge.title %></h1>
-      <h2> <%= @challenge.description %></h2>
-     <%= @challenge.category %>
-<%= @challenge.availability %>
-    </div>
+
+
+  <div class="container justify-content">
+    <h1><%= @challenge.title %></h1>
+    <h2> <%= @challenge.description %></h2>
+    <%= @challenge.category %>
+    <%= @challenge.availability %>
+  </div>
+  
 <div class="card-trip">
     <h2 class="card-trip-pricing"><%= @challenge.duration %></h2>
 
@@ -18,4 +21,4 @@
 </button>
 
 
-<p><%=link_to "I'm keen", new_challenge_booking_path(challenge) %>.</p>
+<p><%=link_to "I'm keen", new_challenge_booking_path(@challenge) %>.</p>

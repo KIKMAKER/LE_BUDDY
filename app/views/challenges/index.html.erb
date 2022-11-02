@@ -15,22 +15,19 @@
 
   </div> %>
 
-<div class="container">
-    <div class="cards">
-      <div class="card-product">
-        <% @challenges.each do |challenge| %>
-          <%# <% <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
-          <div class="card-product-infos">
-            <h3> <%= challenge.title %></h3>
-            <h4><%= challenge.category %>.</h4>
-            <div>
-                <h4 class="card-trip-pricing">
-                  <%= link_to "Request to buddy-up on this challenge", new_challenge_booking_path(challenge) %></h4>
-                </div>
-          </div>
-          <% end %>
-      </div>
-    </div>
-
+<div class="container mt-4">
+  <div class="cards">
+    <% @challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge) do %>
+        <div class="card-product">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-product-infos">
+              <h2> <%= challenge.title %></h2>
+              <p><%= challenge.category %>.</p>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
+</div>
 <%#  %>
