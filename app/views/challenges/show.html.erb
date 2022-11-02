@@ -1,17 +1,19 @@
-<h1>hey</h1>
+<div class="container d-flex justify-content">
 
-<%= @challenge.title %>
-<br>
-<%= @challenge.description %>
-<br>
-<%= @challenge.category %>
-<br>
-<%= @challenge.duration %>
-<br>
+      <h1><%= @challenge.title %></h1>
+      <h2> <%= @challenge.description %></h2>
+     <%= @challenge.category %>
 <%= @challenge.availability %>
+    </div>
+<div class="card-trip">
+    <h2 class="card-trip-pricing"><%= @challenge.duration %></h2>
+    <img src="" class="card-trip-user avatar-bordered" />
 
-  <%= link_to challenge_path(@challenge),
+</div>
+
+
+    <button>  <%= link_to challenge_path(@challenge),
             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
             <i class="fa-solid fa-trash"></i>
-    
             <% end %>
+</button>
