@@ -1,42 +1,30 @@
 <div class="container justify-content-center my-3">
   <h1>DASHBOARD</h1> <h2>"Hey <%= current_user.name %>"</h2>
-
 </div>
 <div class="container d-flex flex-column justify-content-center my-3">
   <div class="row">
     <div class= "col">
-      <h4>Your posted Challenges</h4>
+      <h4>Posted Challenges</h4>
         <% current_user.challenges.all.each do |challenge| %>
-          <p><%= challenge.title %></p>
-      <% end %>
+        <p><%= challenge.title %></p>
+        <% end %>
     </div>
     <div class= "col">
       <h4>Your Challenge requests</h4>
         <% current_user.requests.each do |request| %>
-        <h5><%= request.challenge.title %></h5>
-        <p>Requested start date:<%= request.start_date.strftime("%c") %></p>
-        <p>Requested end date:<%= request.end_date.strftime("%c") %></p>
+          <h5><%= request.challenge.title %></h5>
+          <p>Requested start date:<%= request.start_date.strftime("%c") %></p>
+          <p>Requested end date:<%= request.end_date.strftime("%c") %></p>
       <% end %>
     </div>
     <div class= "col">
       <h4>Your Buddy requests</h4>
         <% current_user.bookings.each do |booking| %>
-        <h5><%= booking.challenge.title %></h5>
-        <p>Requested start date:<%= booking.start_date.strftime("%c") %></p>
-        <p>Requested end date:<%= booking.end_date.strftime("%c") %></p>
-
-      <% end %>
+          <h5><%= booking.challenge.title %></h5>
+          <p>Requested start date:<%= booking.start_date.strftime("%c") %></p>
+          <p>Requested end date:<%= booking.end_date.strftime("%c") %></p>
+          <p><%= link_to "Accept", accept_booking_path(booking), data: {turbo_method: :patch} %> | <%= link_to "Decline", decline_booking_path(booking), data: {turbo_method: :patch} %></p>
+        <% end %>
+    </div>
   </div>
 </div>
-
-
-
-
-
-</div>
-
-
-<%#
-<h5>Your current bookings:</h5>
-<p><%= current_user.challenges.bookings %>
-<%# </p> %>
