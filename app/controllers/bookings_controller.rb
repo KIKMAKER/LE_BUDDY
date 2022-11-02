@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.challenge = @challenge
     @booking.user = current_user
     if @booking.save
-      redirect_to challenge_path(@challenge)
+      redirect_to dashboard_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end
