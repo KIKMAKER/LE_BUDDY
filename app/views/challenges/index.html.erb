@@ -1,9 +1,22 @@
 
 
   <div class="container">
-    <h1>All Challenges</h1>
+    <h1> Welcome back!</h1>
   </div>
 
+<div class="banner">
+  <div class="container">
+    <h1>Find a buddy anywhere in the world</h1>
+  </div>
+</div>
+  <div class="map-banner">
+
+  TRACY'S map
+
+  </div>
+<div class="banner">
+<h1> Work through past challenges together </h1>
+</div>
 <div class="container mt-4">
   <div class="cards">
      <% @challenges.each do |challenge| %>
@@ -17,5 +30,4 @@
   </div>
 </div>
 
-    <p>Find a buddy to work on Le Wagon challenges</p>
-    <p><%= link_to "New Challenge", new_challenge_path, class: "btn btn-flat" %></p>
+    <p class = "m-5" ><button><%= link_to "New Challenge", new_challenge_path, class: "btn btn-flat" %></button></p>
