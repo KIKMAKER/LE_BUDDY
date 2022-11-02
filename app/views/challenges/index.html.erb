@@ -15,6 +15,9 @@
         <% end %>
           <%= challenge.title %>
           <%= challenge.category %>
+          <div >
+            <%= link_to "Request to buddy-up on this challenge", new_challenge_booking_path(challenge) %>
+          </div>
         </div>
       <% end %>
     <% end %>
