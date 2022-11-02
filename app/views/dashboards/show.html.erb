@@ -1,0 +1,36 @@
+<h1>DASHBOARD</h1>
+<p>"Hey <%= current_user.name %>"</p>
+
+<h5>Your current Challenges</h5>
+<p>
+<% current_user.challenges.all.each do |challenge| %>
+<p><%= challenge.title %></p>
+<% end %>
+
+<div class="d-flex">
+  <div>
+    <h4>Your booking requests</h4>
+      <% current_user.bookings.each do |booking| %>
+      <h5><%= booking.challenge.title %></h5>
+      <p>Requested start date:<%= booking.start_date.strftime("%c") %></p>
+      <br>
+       <p>Requested end date:<%= booking.end_date.strftime("%c") %></p>
+    <% end %>
+  </div>
+  <div>
+    <h4>Your Challenge requests</h4>
+      <% current_user.requests.each do |request| %>
+      <h5><%= request.challenge.title %></h5>
+      <p><%= request.start_date.strftime("%c") %></p>
+
+      <p><%= request.end_date.strftime("%c") %></p>
+
+    <% end %>
+  </div>
+
+</div>
+
+<%#
+<h5>Your current bookings:</h5>
+<p><%= current_user.challenges.bookings %>
+<%# </p> %>
