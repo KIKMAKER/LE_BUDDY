@@ -7,7 +7,7 @@ User.destroy_all
 puts 'Creating Users...'
 
 user1 = User.create(
-  name: "serenity",
+  username: "serenity",
   email: "cwamono@gmail.com",
   password: 'user100',
   location: 'Paris',
@@ -16,7 +16,7 @@ user1 = User.create(
 )
 
 user2 = User.create(
-  name: "kikmaker",
+  username: "kikmaker",
   email: "cheekylilkiki@gmail.com",
   password: 'user200',
   location: 'Cape Town',
@@ -25,7 +25,7 @@ user2 = User.create(
 )
 
 user3 = User.create(
-  name: "special-Chris",
+  username: "special-Chris",
   email: "specialc@gmail.com",
   password: 'user300',
   location: 'Rio',
@@ -34,7 +34,7 @@ user3 = User.create(
 )
 
 user4 = User.create(
-  name: "Stickalicious",
+  username: "Stickalicious",
   email: "stricko@gmail.com",
   password: 'user400',
   location: 'Brisbane',
@@ -43,7 +43,7 @@ user4 = User.create(
 )
 
 user5 = User.create(
-  name: "backflip-Joe",
+  username: "backflip-Joe",
   email: "jumpingjoe@gmail.com",
   password: 'user500',
   location: 'London',
@@ -52,7 +52,7 @@ user5 = User.create(
 )
 
 user6 = User.create(
-  name: "Liquid-G",
+  username: "Liquid-G",
   email: "gabriella@gmail.com",
   password: 'user600',
   location: 'Hong Kong',
@@ -61,7 +61,7 @@ user6 = User.create(
 )
 
 user7 = User.create(
-  name: "DOM-inator",
+  username: "DOM-inator",
   email: "domwalsh@gmail.com",
   password: 'user700',
   location: 'Barcelona',
@@ -70,7 +70,7 @@ user7 = User.create(
 )
 
 user8 = User.create(
-  name: "T-diddy",
+  username: "T-diddy",
   email: "tracys@gmail.com",
   password: 'user800',
   location: 'London',
@@ -79,7 +79,7 @@ user8 = User.create(
 )
 
 user9 = User.create(
-  name: "Uncle Joe",
+  username: "Uncle Joe",
   email: "joedrey@gmail.com",
   password: 'user900',
   location: 'Sydney',
@@ -88,7 +88,7 @@ user9 = User.create(
 )
 
 user10 = User.create(
-  name: "TheTuude",
+  username: "TheTuude",
   email: "tudoroj@gmail.com",
   password: 'user1000',
   location: 'Seol',
@@ -97,7 +97,7 @@ user10 = User.create(
 )
 
 user11 = User.create(
-  name: "Herr Nico",
+  username: "Herr Nico",
   email: "wiconico@gmail.com",
   password: 'user1100',
   location: 'Hamburg',
@@ -106,7 +106,7 @@ user11 = User.create(
 )
 
 user12 = User.create(
-  name: "Rogue Roux",
+  username: "Rogue Roux",
   email: "rudeboi@gmail.com",
   password: 'user1200',
   location: 'Berlin',
