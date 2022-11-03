@@ -14,7 +14,7 @@ user1 = User.create(
   bio: "I have worked as a fashion and commercial model, and movement instructor.
         My love for technology, the internet, creating blogs and interest in SEO led me to want to learn how to code and more.
         I plan on starting a tech company in the future.",
-  github: "carolyne_web"
+  github: "carolyne_web",
   latitude: 48.856613,
   longitude: 2.352222
 
@@ -28,7 +28,7 @@ user2 = User.create(
   bio: "I'm Kiki, I'm on to about my third career path now so writing a bio is kind of tricky.
         My background is environment and climate change but I've worked as a project manager, a copy editor and a proofreader.
         I love to get stuck into a project or a puzzle and finding out a more efficient way to do something makes me weak at the knees.",
-  github: "kikmaker"
+  github: "kikmaker",
   latitude: -33.924870,
   longitude: 18.424055
 )
@@ -39,7 +39,7 @@ user3 = User.create(
   password: 'user300',
   location: 'Rio',
   bio: "Loafing around...",
-  github: "ch0rizo"
+  github: "ch0rizo",
   latitude: -22.906847,
   longitude: -43.172897
 )
@@ -51,7 +51,7 @@ user4 = User.create(
   location: 'Brisbane',
   bio: "I'm a graphic designer and artist with a background in politics, events management and marketing,
         looking to move into web design and development. After Le Wagon, I'm open to any cool opportunities out there in the world :)",
-  github: "str1ck0"
+  github: "str1ck0",
   latitude: -27.470030,
   longitude: 153.022980
 )
@@ -65,7 +65,7 @@ user5 = User.create(
         when covid hit and we were all locked away. I started looking into designing websites and joined a codecademy course
         but after finishing that i felt like i needed to take my learning to the next level so i started looking into
         more intensive coding courses then i came across La Wagon and it just seemed like the perfect fit!",
-  github: "JowensM"
+  github: "JowensM",
   latitude: 51.53827300343013,
   longitude: -0.16558234717501402
 )
@@ -76,7 +76,7 @@ user6 = User.create(
   password: 'user600',
   location: 'Hong Kong',
   bio: "Photographer and buyer. Wanting to learn web development to create cool websites for aspiring business ideas.",
-  github: "gabirein"
+  github: "gabirein",
   latitude: 22.32326710206436,
   longitude: 114.17023738335119
 )
@@ -89,7 +89,7 @@ user7 = User.create(
   bio: " Hey, i'm Dom! I'm 28 years old, from Cape Town, but have been living in Barcelona the last 3 years.
          Health fanatic, nature lover, armchair philosopher probably best describe me as a human.
          My background is in holistic health, but this course marks the start of a new chapter! Incredibly stoked to dive into the field of web development, learn new skills, and hopefully form some great friendships in the process.",
-  github: "dommywalsh"
+  github: "dommywalsh",
   latitude: 41.390205,
   longitude: 2.154007
 )
@@ -101,7 +101,7 @@ user8 = User.create(
   location: 'London',
   bio: "Passionate about facilitating the creative process and connecting people to the skills, knowledge and services that they want or need.
         Offering a wide variety of creative and innovative expertise in various industries including education, technology, science, art and more.",
-  github: "tracysik"
+  github: "tracysik",
   latitude: 41.388229955204906,
   longitude: 2.17721937960752
 )
@@ -113,7 +113,7 @@ user9 = User.create(
   location: 'Sydney',
   bio: "Hello! I am South African, born in Cape Town.
        Been living in Australia (Sydney) for the past 5 years, owned my own removals company. Was an incredible experience however I am now looking to upskill myself and dive into the programming world as I feel it is an important aspect of commerce and business in general. Excited for the course!",
-  github: "JOEDREYER"
+  github: "JOEDREYER",
   latitude: -33.79031011011005,
   longitude: 151.20111218991073
 )
@@ -126,7 +126,7 @@ user10 = User.create(
   bio: "What's up everyone, I'm Tudor! I'm a Romanian Dutch national with a BSc in business administration and hospitality management.
         I've worked in four countries, embarked on entrepreneurial endeavors like co-founding a tattoo & barber concept shop in Holland and a high-end European food import business in Zimbabwe.
         I'm always up for some traveling, adventure and meeting open minded folks.",
-  github: "tudor887"
+  github: "tudor887",
   latitude: 37.55996325389237,
   longitude: 126.99536480225466
 )
@@ -148,7 +148,7 @@ user12 = User.create(
   location: 'Berlin',
   bio: "Automate everything. Love the problem, not the solution. Evidence is providence. Avoid doing harm. Carbon-neutral growth is essential.
         I want to expand my technical know-how and have oversight of the development teams that I manage.",
-  github: "ticklemeexcited"
+  github: "ticklemeexcited",
   location: 'Hamburg',
   latitude: 53.59592270766032,
   longitude: 10.013470956527115
