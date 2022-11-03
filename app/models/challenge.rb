@@ -3,11 +3,10 @@ class Challenge < ApplicationRecord
   has_many :bookings
 
   validates :title, presence: true
-  # validates :title, uniqueness: true
+  validates :title, inclusion: { within: %w[Ruby OOP DB Front Rails] }
   validates :description, presence: true
-  validates :category, presence: true
-  # validates :category, inclusion: { within: %w[Ruby OOP DB Front Rails] }
+  # validates :category, presence: true
   validates :duration, presence: true
-  # validates :duration, inclusion: { within: %w[Challenge Full day Module] }
+
   has_one_attached :photo
 end
