@@ -25,4 +25,3 @@ Geocoder.configure(
   #   prefix: 'geocoder:'
   # }
 )
-
