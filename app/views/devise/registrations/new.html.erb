@@ -20,6 +20,10 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :avatar, as: :file %>
+    <%= f.input :location,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "location" }%>
   </div>
 
   <div class="form-actions">
