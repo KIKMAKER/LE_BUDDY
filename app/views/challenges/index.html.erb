@@ -20,10 +20,11 @@
     <% @challenges.each do |challenge| %>
       <%= link_to challenge_path(challenge) do %>
         <div class="card-product">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <%= image_tag(challenge.title) %>
             <div class="card-product-infos">
               <h2> <%= challenge.title %></h2>
-              <p><%= challenge.category %>.</p>
+              <p> <%= challenge.duration %></p>
+              <p> <%= challenge.user.location %></p>
             </div>
         </div>
       <% end %>
