@@ -1,0 +1,28 @@
+<div class="container justify-content-center my-3">
+  <h1>DASHBOARD</h1> <h2>"Hey <%= @user.name %>"</h2>
+</div>
+<div class="container d-flex flex-column justify-content-center my-3">
+  <div class="row">
+    <div class= "col">
+      <h4>Posted Challenges</h4>
+        <% @user.challenges.all.each do |challenge| %>
+        <p><%= challenge.title %></p>
+        <% end %>
+    </div>
+    <div class= "col">
+      <h4>Your Challenge requests</h4>
+        <% @user.requests.each do |request| %>
+          <h5><%= request.challenge.title %></h5>
+
+      <% end %>
+    </div>
+    <div class= "col">
+      <h4>Your Buddy requests</h4>
+        <% @user.bookings.each do |booking| %>
+          <h5><%= booking.challenge.title %></h5>
+
+          <p><%= link_to "Accept", accept_booking_path(booking), data: {turbo_method: :patch} %> | <%= link_to "Decline", decline_booking_path(booking), data: {turbo_method: :patch} %></p>
+        <% end %>
+    </div>
+  </div>
+</div>
