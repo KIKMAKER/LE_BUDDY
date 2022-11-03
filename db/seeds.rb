@@ -10,84 +10,108 @@ user1 = User.create(
   name: "serenity",
   email: "cwamono@gmail.com",
   password: 'user100',
-  location: 'Paris'
+  location: 'Paris',
+  latitude: 48.856613,
+  longitude: 2.352222
 )
 
 user2 = User.create(
   name: "kikmaker",
   email: "cheekylilkiki@gmail.com",
   password: 'user200',
-  location: 'Cape Town'
+  location: 'Cape Town',
+  latitude: -33.924870,
+  longitude: 18.424055
 )
 
 user3 = User.create(
   name: "special-Chris",
   email: "specialc@gmail.com",
   password: 'user300',
-  location: 'Rio'
+  location: 'Rio',
+  latitude: -22.906847,
+  longitude: -43.172897
 )
 
 user4 = User.create(
   name: "Stickalicious",
   email: "stricko@gmail.com",
   password: 'user400',
-  location: 'Brisbane'
+  location: 'Brisbane',
+  latitude: -27.470030,
+  longitude: 153.022980
 )
 
 user5 = User.create(
   name: "backflip-Joe",
   email: "jumpingjoe@gmail.com",
   password: 'user500',
-  location: 'London'
+  location: 'London',
+  latitude: 51.53827300343013,
+  longitude: -0.16558234717501402
 )
 
 user6 = User.create(
   name: "Liquid-G",
   email: "gabriella@gmail.com",
   password: 'user600',
-  location: 'Hong Kong'
+  location: 'Hong Kong',
+  latitude: 22.32326710206436,
+  longitude: 114.17023738335119
 )
 
 user7 = User.create(
   name: "DOM-inator",
   email: "domwalsh@gmail.com",
   password: 'user700',
-  location: 'Barcelona'
+  location: 'Barcelona',
+  latitude: 41.388229955204906,
+  longitude: 2.17721937960752
 )
 
 user8 = User.create(
   name: "T-diddy",
   email: "tracys@gmail.com",
   password: 'user800',
-  location: 'London'
+  location: 'London',
+  latitude: 39.49910781432418,
+  longitude: 22.5412813192655
 )
 
 user9 = User.create(
   name: "Uncle Joe",
   email: "joedrey@gmail.com",
   password: 'user900',
-  location: 'Sydney'
+  location: 'Sydney',
+  latitude: -33.79031011011005,
+  longitude: 151.20111218991073
 )
 
 user10 = User.create(
   name: "TheTuude",
   email: "tudoroj@gmail.com",
   password: 'user1000',
-  location: 'Seol'
+  location: 'Seol',
+  latitude: 37.55996325389237,
+  longitude: 126.99536480225466
 )
 
 user11 = User.create(
   name: "Herr Nico",
   email: "wiconico@gmail.com",
   password: 'user1100',
-  location: 'Hamberg'
+  location: 'Hamburg',
+  latitude: 53.59592270766032,
+  longitude: 10.013470956527115
 )
 
 user12 = User.create(
   name: "Rogue Roux",
   email: "rudeboi@gmail.com",
   password: 'user1200',
-  location: 'Berlin'
+  location: 'Berlin',
+  latitude: 52.535341807779815,
+  longitude: 13.40822904753448
 )
 
 puts 'Creating Challenges...'
