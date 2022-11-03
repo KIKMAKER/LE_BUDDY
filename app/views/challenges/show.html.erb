@@ -1,16 +1,29 @@
 
 
 
-<div class="container m-4">
-<h1>The Buddy for this challenge is: </h1>
-<h2><%= @challenge.user.username %></h2>
-<h2><%= @challenge.user.bio %></h2>
-  <div class="container m-4 p-4 justify-content card-trip">
-    <h1><%= @challenge.title %></h1>
-    <h2> <%= @challenge.description %></h2>
-    <h2><%= @challenge.category %></h2>
-   <h2><%= @challenge.availability %></h2>
-    <h2><%= @challenge.duration %></h2>
-    <p><%=link_to "I'm keen", new_challenge_booking_path(@challenge) %></p>
-  </div>
+<div class="container m-4 p-4 justify-content card-trip ">
+<h1>The Buddy for this challenge is: <%= @challenge.user.username %></h1>
+<div>
+<% if @challenge.user.avatar.attached? %>
+<%= cl_image_tag @challenge.user.avatar.key %>
+<% else %>
+<img class = "avatar" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
+<% end %>
+</div>
+<br>
+<h2><%= @challenge.user.username %>'s Bio:</h2>
+<br>
+<p><%= @challenge.user.bio %><p>
+<br>
+<br>
+<h2>Location:</h2>
+<p> <%= @challenge.user.location %></p>
+
+ <br>
+    <h3> <%= @challenge.description %></h3>
+
+
+    <br>
+    <div class ="button"><%=link_to "Buddy Up", new_challenge_booking_path(@challenge) %></div>
+
 </div>
