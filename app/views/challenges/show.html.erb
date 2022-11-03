@@ -1,24 +1,12 @@
 
-
-
-  <div class="container justify-content">
+<h1>The Buddy for this challenge</h1>
+<div class="container">
+  <div class="container m-4 justify-content card-trip">
     <h1><%= @challenge.title %></h1>
     <h2> <%= @challenge.description %></h2>
-    <%= @challenge.category %>
-    <%= @challenge.availability %>
+    <h2><%= @challenge.category %></h2>
+   <h2><%= @challenge.availability %></h2>
+    <h2><%= @challenge.duration %></h2>
+    <p><%=link_to "I'm keen", new_challenge_booking_path(@challenge) %></p>
   </div>
-  
-<div class="card-trip">
-    <h2 class="card-trip-pricing"><%= @challenge.duration %></h2>
-
 </div>
-
-
-    <button>  <%= link_to challenge_path(@challenge),
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-            <i class="fa-solid fa-trash"></i>
-            <% end %>
-</button>
-
-
-<p><%=link_to "I'm keen", new_challenge_booking_path(@challenge) %>.</p>
