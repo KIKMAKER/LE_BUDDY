@@ -1,7 +1,16 @@
+.cards  a{
+  text-decoration: none!important;
+}
+
+.cards  a:hover{
+  color: #e60f05;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 .card-trip > img {
@@ -25,11 +34,12 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 25px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  // --bs-link-hover-color: #e60f05;
 }
 
 .card-trip-infos .card-trip-user {
@@ -37,6 +47,7 @@
   right: 16px;
   top: -20px;
   width: 40px;
+  padding: 25px;
 }
 
 .cards {
@@ -80,27 +91,39 @@
   }
 }
 
+.card-product.card-product-shadow {
+  border: none;
+  // box-shadow: 0 2px 5px 0 red;
+}
+
 .card-product {
   overflow: hidden;
   height: 300px;
   width: 300px;
   background: white;
   border-radius: 25px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px 0 red;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .card-product img {
   height: 65%;
   width: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
+}
+
+.card-product h2 p {
+  --bs-link-hover-color: #e60f05;
 }
 
 .card-product p {
