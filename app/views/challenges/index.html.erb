@@ -1,28 +1,33 @@
 
 
-  <div class="container">
-    <h1>All Challenges</h1>
+  <%# <div class="container">
+    <h1> Welcome back!</h1>
   </div>
+
+<div class="banner">
+  <div class="container">
+    <h1>Find a buddy anywhere in the world</h1>
+  </div>
+</div>
+  <div class="map-banner">
+
+  TRACY'S map
+
+  </div> %>
 
 <div class="container mt-4">
   <div class="cards">
-     <% @challenges.each do |challenge| %>
+    <% @challenges.each do |challenge| %>
       <%= link_to challenge_path(challenge) do %>
-        <% if challenge.photo.attached? %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path challenge.photo.key %>')">
-        <% else %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <% end %>
-          <%= challenge.title %>
-          <%= challenge.category %>
-          <div >
-            <%= link_to "Request to buddy-up on this challenge", new_challenge_booking_path(challenge) %>
-          </div>
+        <div class="card-product">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-product-infos">
+              <h2> <%= challenge.title %></h2>
+              <p><%= challenge.category %>.</p>
+            </div>
         </div>
       <% end %>
     <% end %>
   </div>
 </div>
-
-    <p>Find a buddy to work on Le Wagon challenges</p>
-    <p><%= link_to "New Challenge", new_challenge_path, class: "btn btn-flat" %></p>
+<%#  %>

@@ -30,6 +30,23 @@ class BookingsController < ApplicationController
     redirect_to booking_path, status: :see_other
   end
 
+  def accept
+    @booking = Booking.find(params[:id])
+    if @booking.accepted!
+      redirect_to dashboard_path, notice: :'Booking accepted'
+    else
+      redirect_to dashboard_path, notice: 'Booking could not be accepted - please try again'
+    end
+  end
+
+  def decline
+    @booking = Booking.find(params[:id])
+    if @booking.declined!
+      redirect_to dashboard_path, notice: :'Booking declined'
+    else
+      redirect_to dashboard_path, notice: 'Booking could not be declined - please try again'
+    end
+  end
 
   def destroy
     @booking = Booking.find(bookings_params)

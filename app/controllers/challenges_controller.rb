@@ -1,10 +1,15 @@
 class ChallengesController < ApplicationController
   def index
-    @challenges = Challenge.all
+
+    all_challenges = Challenge.all
+    not_my_challenges = all_challenges.reject { |challenge| challenge.user == current_user }
+    @challenges = not_my_challenges
+
   end
 
   def show
     @challenge = Challenge.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -16,7 +21,7 @@ class ChallengesController < ApplicationController
     @challenge.user = current_user
 
     if @challenge.save
-      redirect_to challenge_path(@challenge)
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
