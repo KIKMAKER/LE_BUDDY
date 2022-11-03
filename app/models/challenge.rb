@@ -3,7 +3,7 @@ class Challenge < ApplicationRecord
   has_many :bookings
 
   validates :title, presence: true
-  validates :title, uniqueness: true
+  # validates :title, uniqueness: true
   validates :description, presence: true
   validates :category, presence: true
   # validates :category, inclusion: { within: %w[Ruby OOP DB Front Rails] }
