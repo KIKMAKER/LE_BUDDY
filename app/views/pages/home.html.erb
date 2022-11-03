@@ -21,8 +21,10 @@
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <div class="p-3">
        <div class="d-flex justify-content-between mb-2">
-          <h2> <%= challenge.title %></h2>
-          <p><%= challenge.category %></p>
+          <div class="card-footer">
+            <h2><%= challenge.title %></h2>
+            <p><%= challenge.category %></p>
+          </div>
         </div>
        </div>
       <%# <%= cl_image_tag challenge.user.avatar.key, class: "card-trip-user avatar-bordered" %>
