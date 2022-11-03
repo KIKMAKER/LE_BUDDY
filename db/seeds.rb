@@ -17,7 +17,6 @@ user1 = User.create(
   github: "carolyne_web",
   latitude: 48.856613,
   longitude: 2.352222
-
 )
 
 user2 = User.create(
@@ -138,14 +137,15 @@ user11 = User.create(
   location: 'Hamberg',
   bio: "Just finished school in Hamburg, Germany. Now about to join Le Wagon, for the Web-Development course in Cape Town.
         After the course i'm starting to study in London and planning on working in an Web-Development company (part Time).",
-  github: "nicowkm"
+  github: "nicowkm",
+  latitude: 53.5733316242797,
+  longitude: 9.995776597302655
 )
 
 user12 = User.create(
   username: "Rouge Roux",
   email: "rudeboi@gmail.com",
   password: 'user1200',
-  location: 'Berlin',
   bio: "Automate everything. Love the problem, not the solution. Evidence is providence. Avoid doing harm. Carbon-neutral growth is essential.
         I want to expand my technical know-how and have oversight of the development teams that I manage.",
   github: "ticklemeexcited",

@@ -1,7 +1,11 @@
 
-<h1>The Buddy for this challenge</h1>
-<div class="container">
-  <div class="container m-4 justify-content card-trip">
+
+
+<div class="container m-4">
+<h1>The Buddy for this challenge is: </h1>
+<h2><%= @challenge.user.username %></h2>
+<h2><%= @challenge.user.bio %></h2>
+  <div class="container m-4 p-4 justify-content card-trip">
     <h1><%= @challenge.title %></h1>
     <h2> <%= @challenge.description %></h2>
     <h2><%= @challenge.category %></h2>
