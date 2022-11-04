@@ -1,20 +1,34 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'banner.png'%>)">
+
   <div class="container">
    <h1>Welcome to Le Buddy</h1>
     <p>Work through past challenges together.</p>
     </div>
     <div>
      <h2>Find a buddy anywhere in the world!</h2>
+     <h3> Click on a marker on the map to view a buddy</h3>
     </div>
   </div>
 </div>
-
-
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class= "ml-4 flex-parent-element" >
+  <%# <div class="container m-4"> %>
+    <div class="map" style="width: 50%; height: 500px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    <%# </div> %>
   </div>
+  
+  <div class="USP">
+    <div class="card-product-home">
+      <h2> Buddy up and rake green! </h2>
+    </div>
+    <div class="card-product-home">
+      <h2> Get to those optionals ... </h2>
+    </div>
+    <div class="card-product-home">
+      <h2> Make code buddies </h2>
+    </div>
 
 <div class="container mt-4">
   <div class="cards">
@@ -30,5 +44,7 @@
         </div>
       <% end %>
     <% end %>
+
   </div>
 </div>
+CAROUSEL
