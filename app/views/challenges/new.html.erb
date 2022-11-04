@@ -1,9 +1,10 @@
+<div class="container m-4 p-4 justify-content card-trip ">
 <h1>Create new challenge:</h1>
 <%= simple_form_for @challenge do |f| %>
-<%= f.input :title, :label => "Ruby, OOP, DB, Front or Rails"%>
-<%= f.input :description, :label => "Describe your difficuity with this challenge"%>
-<%= f.input :category, :collection => %w[Ruby OOP DB Front Rails]  %>
-<%= f.input :duration, :label => "Work on a single Challenge, Full Day of challenges or an entire Module?", :collection => %w[Challenge FullDay Module] %>
+<%= f.input :title, :label => 'LeWagon Module', :collection => ['Ruby', 'OOP', 'DB', 'Front', 'Rails'] %>
+<%= f.input :description, :label => "Describe your difficuity with this challenge" %>
+<%= f.input :duration, :label => "Work on a single Challenge, Full Day of challenges or an entire Module?", :collection => ['Challenge', 'Full Day', 'Module'] %>
 <%= f.button :submit %>
-
 <% end %>
+</div>
+

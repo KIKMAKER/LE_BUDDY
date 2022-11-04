@@ -1,5 +1,5 @@
 .button {
-  color: #4A4A4A;
+  color: #4d04c4;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
@@ -10,4 +10,15 @@
 
 .button:hover {
   opacity: 1;
+}
+
+.btn-buddy {
+  background-color: #670bff;
+  color: white;
+  border-radius: 25px;
+}
+
+.btn-buddy:hover {
+  background-color: #7b2cfb;
+  color: rgb(250, 238, 238);
 }

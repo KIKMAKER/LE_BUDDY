@@ -18,6 +18,7 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     <%# </div> %>
   </div>
+  
   <div class="USP">
     <div class="card-product-home">
       <h2> Buddy up and rake green! </h2>
@@ -28,6 +29,22 @@
     <div class="card-product-home">
       <h2> Make code buddies </h2>
     </div>
+
+<div class="container mt-4">
+  <div class="cards">
+    <% @challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge) do %>
+        <div class="card-product">
+            <%= image_tag(challenge.title) %>
+            <div class="card-product-infos">
+              <h2> <%= challenge.title %></h2>
+              <p> <%= challenge.duration %></p>
+              <p> <%= challenge.user.location %></p>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
+
   </div>
 </div>
 CAROUSEL
