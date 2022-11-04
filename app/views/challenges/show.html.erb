@@ -14,27 +14,25 @@
       </div>
     </div>
     <div class="buddy-reason text-center ml-4">
-      <p>Why I want to do this challenge...</p>
-      <p><%= @challenge.description %></p>
+      <div class="buddy-reason1">
+        <p>Why I want to do this challenge...</p>
+      </div>
+        <p><%= @challenge.description %></p>
     </div>
   </div>
   <br>
   <div class="buddy-bio">
     <p> <strong>Bio:</strong> <%= @challenge.user.bio %><p>
   </div>
+  <% if current_user =! @challenge.user %>
   <div class="buddy-up">
-    <%=link_to "BUDDY UP", new_challenge_booking_path(@challenge), class: 'btn btn-buddy' %>
+    <button type="button" class="btn btn-buddy" data-bs-toggle="modal" data-bs-target="#exampleModal">Buddy Up</button>
   </div>
+  <% end %>
 </div>
 
 
-<h2>Location:</h2>
-<p> <%= @challenge.user.location %></p>
-    <br>
-<button type="button" class="btn btn-buddy" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Buddy Up
-</button>
-    <br>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
