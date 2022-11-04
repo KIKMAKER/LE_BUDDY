@@ -23,8 +23,8 @@
             <%= image_tag(challenge.title) %>
             <div class="card-product-infos">
               <h2> <%= challenge.title %></h2>
-              <p> <%= challenge.duration %></p>
-              <p> <%= challenge.user.location %></p>
+              <p> Duration: <%= challenge.duration %></p>
+              <p> Location:<%= challenge.user.location %></p>
             </div>
         </div>
       <% end %>
