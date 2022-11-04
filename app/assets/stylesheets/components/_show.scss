@@ -1,13 +1,13 @@
 .container-show {
   background-color: whitesmoke;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  box-shadow: 0 2px 5px 0 red;
 }
 
 .buddy-info {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 25px;
   height: 220px;
   width: 220px;
 
@@ -16,7 +16,9 @@
 .buddy-name-place {
 
   h4 {
-    font-size: 22px;
+    font-size: 25px;
+
+
   }
 
   p {
@@ -24,16 +26,22 @@
   }
 }
 
+.buddy-reason1 {
+  font-size: 20px;
+  
+}
 .buddy-reason {
   padding: 20px;
   margin-left: 40px;
   font-size: 20px;
+
 }
 
 .buddy-bio {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 20px;
+
 }
 
 .buddy-up {
