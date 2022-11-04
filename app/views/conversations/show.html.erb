@@ -1,5 +1,5 @@
 <div class="container chatroom" data-controller="conversation-subscription" data-conversation-subscription-conversation-id-value="<%= @conversation.id %>" >
-  <h1>#<%= @conversation.name %></h1>
+  <h1>#<%= @conversation.challenge.title %> with </h1>
 
   <div class="messages" data-conversation-subscription-target="messages">
     <% @conversation.messages.each do |message| %>
@@ -9,7 +9,7 @@
 
   <%= simple_form_for [@conversation, @message],
   html: {class: "d-flex", data:
-  { action: "turbo:submit-end->chatroom-subscription#resetForm" }} do |f|
+  { action: "turbo:submit-end->conversation-subscription#resetForm" }} do |f|
 
 %>
   <%= f.input :content,
