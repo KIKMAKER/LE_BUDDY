@@ -1,5 +1,57 @@
 // Specific CSS for your home-page
 body {
-  background-color: #e60f05;
+
+  background-color: #fdf9fa;
   margin-bottom: 50px;
 }
+
+.USP {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.USP h2{
+  text-align: center;
+  font-weight: 400;
+}
+
+.card-product-home {
+  color: #EAEAEA;
+  overflow: hidden;
+  height: 200px;
+  // width: 200px;
+  background: #e60f05;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px 0 #233038;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.parent {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.map {
+  border-radius: 25px;
+  box-shadow: #233038;
+  margin: 15px;
+}
+
+.flex-parent-element {
+  display: flex;
+  width: auto;
+}
+
+.flex-child-element {
+  flex: 1;
+  // margin: 10px;
+}
+
