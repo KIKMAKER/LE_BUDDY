@@ -13,11 +13,11 @@ export default class extends Controller {
      this.map = new mapboxgl.Map({
        container: this.element,
       style: "mapbox://styles/pdunleav/cjofefl7u3j3e2sp0ylex3cyb"
-     })
+     });
 
-     this.#addMarkersToMap()
-     this.#fitMapToMarkers()
-
+     this.#addMarkersToMap();
+     this.#fitMapToMarkers();
+     this.map.scrollZoom.disable();
   }
 
   #addMarkersToMap() {

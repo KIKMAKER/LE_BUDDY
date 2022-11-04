@@ -1,9 +1,32 @@
 // Specific CSS for your home-page
 body {
-
   background-color: #fdf9fa;
   margin-bottom: 50px;
 }
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  color: #233038;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: #EAEAEA;
+  //
+}
+
+h3 {
+  color: #233038;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+}
+
 
 .USP {
   display: grid;
@@ -34,7 +57,7 @@ body {
 }
 
 .parent {
-  margin: 1rem;
+  // margin: 1rem;
   padding: 2rem 2rem;
   text-align: center;
 }
@@ -42,16 +65,23 @@ body {
 .map {
   border-radius: 25px;
   box-shadow: #233038;
-  margin: 15px;
 }
 
 .flex-parent-element {
   display: flex;
   width: auto;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 110px;
+
+  }
 }
 
 .flex-child-element {
   flex: 1;
   // margin: 10px;
 }
-
