@@ -3,8 +3,8 @@
   <div class="justify-content-center mt-4" >
     <div class="card-dashboard p-5">
       <div class="text-center dash-head">
-        <h1>YOUR DASHBOARD</h1>
         <h2>Hey there, <%= @user.username %></h2>
+        <h1>YOUR DASHBOARD</h1>
       </div>
 
 <ul class="nav nav-pills mb-3 mt-4 justify-content-around" id="pills-tab" role="tablist">
@@ -24,7 +24,7 @@
 
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
     <% @user.challenges.each do |challenge| %>
-      <%= link_to challenge_path(challenge) do class:"text-decoration-none text-dark"%>
+      <%= link_to challenge_path(challenge), class:"text-decoration-none text-dark" do %>
         <div class="card-profile">
         <%= image_tag  "#{challenge.title}.png" %>
         <div class="card-profile-infos">
@@ -40,7 +40,7 @@
 
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
     <% @user.bookings.pending.each do |booking| %>
-      <%= link_to challenge_path(booking.challenge) do class:"text-decoration-none text-dark" %>
+      <%= link_to challenge_path(booking.challenge), class:"text-decoration-none text-dark" do %>
         <div class="card-profile">
           <%= image_tag  "#{booking.challenge.title}.png" %>
           <div class="card-profile-infos">
@@ -72,7 +72,7 @@
 
     <h5 class="mb-3 mt-3">Get excited to work on these:</h5>
     <% @user.requests.accepted.each do |request| %>
-      <%= link_to challenge_path(request.challenge) do class:"text-decoration-none text-dark" %>
+      <%= link_to challenge_path(request.challenge), class:"text-decoration-none text-dark" do %>
           <div class="card-profile chat-card">
             <%= image_tag  "#{request.challenge.title}.png" %>
             <div class="d-flex justify-content-between align-items-center">
