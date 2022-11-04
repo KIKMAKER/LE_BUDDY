@@ -42,7 +42,8 @@
             <%= link_to challenge_path(request.challenge) do %>
               <p><%= request.challenge.title %></p>
             <% end %>
-            <%= link_to 'Start Chat', challenge_conversations_path(request.challenge), data: {turbo_method: :post}  %>
+
+            <%= link_to 'Start Chat', challenge_conversations_path(booking.challenge), data: {turbo_method: :post}, class: 'btn btn-buddy'  %>
           <% end %>
 
           <h5>The ones you didn't get to work on:</h5>
