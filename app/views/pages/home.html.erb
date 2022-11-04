@@ -4,21 +4,9 @@
     <h1>Welcome to Le Buddy</h1>
       <p>Work through past challenges together.</p>
   </div>
-  <div>
-    <h2>Find a buddy anywhere in the world!</h2>
-    <h3> Click on a marker on the map to view a buddy</h3>
+
   </div>
-   </div>
-  </div>
-<div class= "ml-4 flex-parent-element" >
-  <%# <div class="container m-4"> %>
-    <div class="map" style="width: 50%; height: 500px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    <%# </div> %>
-  </div>
-<div class="container">
+<div class= "flex-parent-element" >
   <div class="USP">
     <div class="card-product-home">
       <h2> Buddy up and rake green! </h2>
@@ -29,8 +17,24 @@
     <div class="card-product-home">
       <h2> Make code buddies </h2>
     </div>
-</div>
-
+  </div>
+  <br>
+  <br>
+  <br>
+   <div>
+    <h3> Find a buddy anywhere in the world!</h3>
+  </div>
+  <br>
+  <br>
+  <br>
+  <p> Click on a marker on the map to view a buddy</p>
+    <div class="map" style="width: 100%; height: 500px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    <br>
+    <h1> Alumni Looking For Buddies </h1>
   <div class="cards">
       <% @challenges.each do |challenge| %>
         <%= link_to challenge_path(challenge) do %>
@@ -53,4 +57,3 @@
       <% end %>
     </div>
   </div>
-</div>
