@@ -1,2 +1,24 @@
 // Import page-specific CSS files here.
 @import "home";
+.banner-index {
+  background-color: #f7f7f7;
+  width: auto;
+  height: 30px;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  position: relative;
+  border-radius: 25px
+}
+.banner-index h1 {
+  margin: 0;
+  color: #233038;
+  text-shadow: 1px 1px 3px rgba(248, 245, 245, 0.2);
+  font-size: 50px;
+  font-weight: bold;
+
+}
