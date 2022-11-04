@@ -24,7 +24,8 @@
             <div class="card-product-infos">
               <h2> <%= challenge.title %></h2>
               <p> Duration: <%= challenge.duration %></p>
-              <p> Location:<%= challenge.user.location %></p>
+              <p> Location: <%= challenge.user.location %></p>
+              <p> <%= challenge.user.batch_number %></p>
             </div>
         </div>
       <% end %>
