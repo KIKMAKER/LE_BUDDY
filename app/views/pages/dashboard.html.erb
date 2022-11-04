@@ -16,39 +16,40 @@
         </div>
         <div class= "col">
           <h4>Your Challenge requests</h4>
-            <% @user.requests.each do |request| %>
-              <%= link_to challenge_path(request.challenge) do %>
-                <h5><%= request.challenge.title %></h5>
+            <% @user.bookings.each do |booking| %>
+              <%= link_to challenge_path(booking.challenge) do %>
+                <h5><%= booking.challenge.title %></h5>
               <% end %>
-                <p>status: <%= request.status %></p>
+                <p>status: <%= booking.status %></p>
             <% end %>
         </div>
         <div class= "col">
           <h4>Your Future Buddy requests</h4>
           <h5>Respond to these:</h5>
-          <% if @user.bookings.pending.empty? %>
+          <% if @user.requests.pending.empty? %>
           <p>You don't have any pending buddy-up requests.</p>
           <% else %>
-            <% @user.bookings.pending.each do |booking| %>
-              <%= link_to challenge_path(booking.challenge) do %>
-                <p><%= booking.challenge.title %></p>
+            <% @user.requests.pending.each do |request| %>
+              <%= link_to challenge_path(request.challenge) do %>
+                <p><%= request.challenge.title %></p>
               <% end %>
-              <p><%= link_to "Accept", accept_booking_path(booking), data: {turbo_method: :patch} %> | <%= link_to "Decline", decline_booking_path(booking), data: {turbo_method: :patch} %></p>
+              <p><%= link_to "Accept", accept_booking_path(booking), data: {turbo_method: :patch} %> | <%= link_to "Decline", decline_booking_path(request), data: {turbo_method: :patch} %></p>
             <% end %>
           <% end %>
 
             <h5>Get excited to work on these:</h5>
-          <% @user.bookings.accepted.each do |booking| %>
-            <%= link_to challenge_path(booking.challenge) do %>
-              <p><%= booking.challenge.title %></p>
+          <% @user.requests.accepted.each do |request| %>
+            <%= link_to challenge_path(request.challenge) do %>
+              <p><%= request.challenge.title %></p>
             <% end %>
-            <%= link_to 'Start Chat', challenge_conversations_path(booking.challenge), data: {turbo_method: :post}  %>
+
+            <%= link_to 'Start Chat', challenge_conversations_path(booking.challenge), data: {turbo_method: :post}, class: 'btn btn-buddy'  %>
           <% end %>
 
           <h5>The ones you didn't get to work on:</h5>
-          <% @user.bookings.declined.each do |booking| %>
-            <%= link_to challenge_path(booking.challenge) do %>
-              <p><%= booking.challenge.title %></p>
+          <% @user.requests.declined.each do |request| %>
+            <%= link_to challenge_path(request.challenge) do %>
+              <p><%= request.challenge.title %></p>
             <% end %>
           <% end %>
     <%#

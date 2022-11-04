@@ -1,15 +1,15 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'banner.png'%>)">
 
   <div class="container">
-   <h1>Welcome to Le Buddy</h1>
-    <p>Work through past challenges together.</p>
-    </div>
-    <div>
-     <h2>Find a buddy anywhere in the world!</h2>
-     <h3> Click on a marker on the map to view a buddy</h3>
-    </div>
+    <h1>Welcome to Le Buddy</h1>
+      <p>Work through past challenges together.</p>
   </div>
-</div>
+  <div>
+    <h2>Find a buddy anywhere in the world!</h2>
+    <h3> Click on a marker on the map to view a buddy</h3>
+  </div>
+   </div>
+  </div>
 <div class= "ml-4 flex-parent-element" >
   <%# <div class="container m-4"> %>
     <div class="map" style="width: 50%; height: 500px;"
@@ -18,7 +18,7 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     <%# </div> %>
   </div>
-  
+<div class="container">
   <div class="USP">
     <div class="card-product-home">
       <h2> Buddy up and rake green! </h2>
@@ -29,22 +29,28 @@
     <div class="card-product-home">
       <h2> Make code buddies </h2>
     </div>
+</div>
 
-<div class="container mt-4">
   <div class="cards">
-    <% @challenges.each do |challenge| %>
-      <%= link_to challenge_path(challenge) do %>
-        <div class="card-product">
-            <%= image_tag(challenge.title) %>
-            <div class="card-product-infos">
-              <h2> <%= challenge.title %></h2>
-              <p> <%= challenge.duration %></p>
-              <p> <%= challenge.user.location %></p>
-            </div>
-        </div>
+      <% @challenges.each do |challenge| %>
+        <%= link_to challenge_path(challenge) do %>
+          <div class="card-product">
+              <%= image_tag  "#{challenge.title}.png" %>
+              <div class="card-product-infos">
+                <div class="card-product-text d-flex justify-content-between align-items-end">
+                  <div class="card-title-duration margin-bottom: 10px">
+                    <h2> <%= challenge.title %></h2>
+                    <p> Duration: <%= challenge.duration %></p>
+                  </div>
+                  <div class="card-location-number font-size: 20px">
+                    <p> <i class="fa-solid fa-location-dot"></i> <%= challenge.user.location %></p>
+                    <p> Batch number: <%= challenge.user.batch_number %></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-
+    </div>
   </div>
 </div>
-CAROUSEL

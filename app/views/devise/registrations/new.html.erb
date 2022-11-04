@@ -1,5 +1,5 @@
-<h2>Sign up</h2>
-
+<div class="container justify-content-center">
+  <h2>Sign up</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
   data: {turbo: false}) do |f| %>
 
@@ -12,6 +12,15 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :bio, :label => "Enter a short(ish) bio",
+                required: true,
+                autofocus: true %>
+    <%= f.input :location, :label => "Where do you live?",
+                required: true,
+                autofocus: true %>
+    <%= f.input :github, :label => "Github username",
+                required: true,
+                autofocus: true %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -32,3 +41,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
