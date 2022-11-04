@@ -145,3 +145,16 @@
     font-size: 15px;
   }
 }
+
+.card-dashboard {
+  // overflow: hidden;
+  height: 80vh;
+  width: 80vw;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px 0 red;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // display: flex;
+  align-items: center;
+  padding: 15px;
+}

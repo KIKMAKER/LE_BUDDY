@@ -1,13 +1,10 @@
-
-
-
-<div class="container m-4 p-4 justify-content card-trip ">
+<div class="container m-4 p-4 justify-content-center card-trip ">
 <h1>The Buddy for this challenge is: <%= @challenge.user.username %></h1>
 <div>
 <% if @challenge.user.avatar.attached? %>
-<%= cl_image_tag @challenge.user.avatar.key %>
+<%= cl_image_tag @challenge.user.avatar.key, class: "avatar-large"%>
 <% else %>
-<img class = "avatar" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
+ <img class = "avatar-large" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
 <% end %>
 </div>
 <br>
@@ -16,14 +13,31 @@
 <p><%= @challenge.user.bio %><p>
 <br>
 <br>
+
 <h2>Location:</h2>
 <p> <%= @challenge.user.location %></p>
-
- <br>
-    <h3> <%= @challenge.description %></h3>
-
+    <br>
 
     <br>
     <%=link_to "Buddy Up", new_challenge_booking_path(@challenge), class: 'btn btn-buddy' %>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Write a message to personalise your Buddy Request</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <%= simple_form_for [@challenge, @booking] do |f| %>
+        <%= f.input :comment %>
+        <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
