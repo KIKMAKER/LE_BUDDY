@@ -4,7 +4,7 @@
   padding: 90px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -14,7 +14,6 @@
 .banner h1 {
   margin: 0;
   color: #f7f7f7;
-
   text-shadow: 1px 1px 3px rgba(248, 245, 245, 0.2);
   font-size: 50px;
   font-weight: bold;
@@ -22,8 +21,8 @@
 
 .banner p {
   font-size: 20px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
   color: #f7f7f7;
-  opacity: .8;
   text-shadow: 1px 1px 3px rgba(234, 239, 236, 0.362);
   margin-bottom: 30px;
 }
@@ -37,5 +36,13 @@
   position: absolute;
   bottom: 0;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+}
+
+.banner h3 {
+  position: absolute;
+  color: #f7f7f7;
+  bottom: 0;
+  font-size: 15px;
+  margin-left: 25px;
 }
