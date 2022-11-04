@@ -1,18 +1,32 @@
-<div class="container m-4 p-4 justify-content-center card-trip ">
-<h1>The Buddy for this challenge is: <%= @challenge.user.username %></h1>
-<div>
-<% if @challenge.user.avatar.attached? %>
-<%= cl_image_tag @challenge.user.avatar.key, class: "avatar-large"%>
-<% else %>
- <img class = "avatar-large" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
-<% end %>
+<div class="container container-show mt-5">
+  <div class="header-show d-flex align-items-center justify-content-between">
+    <div class="buddy-info p-4 d-flex flex-column align-items-center">
+      <div class="buddy-avatar">
+        <% if @challenge.user.avatar.attached? %>
+          <%= cl_image_tag @challenge.user.avatar.key, class: "avatar-large"%>
+        <% else %>
+          <img class = "avatar-large" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
+        <% end %>
+      </div>
+      <div class="buddy-name-place text-center mt-4">
+        <h4><%= @challenge.user.username.strip %></h4>
+        <p class="fa-solid fa-location-dot"> <%=  @challenge.user.location %></p>
+      </div>
+    </div>
+    <div class="buddy-reason text-center ml-4">
+      <p>Why I want to do this challenge...</p>
+      <p><%= @challenge.description %></p>
+    </div>
+  </div>
+  <br>
+  <div class="buddy-bio">
+    <p> <strong>Bio:</strong> <%= @challenge.user.bio %><p>
+  </div>
+  <div class="buddy-up">
+    <%=link_to "BUDDY UP", new_challenge_booking_path(@challenge), class: 'btn btn-buddy' %>
+  </div>
 </div>
-<br>
-<h2><%= @challenge.user.username %>'s Bio:</h2>
-<br>
-<p><%= @challenge.user.bio %><p>
-<br>
-<br>
+
 
 <h2>Location:</h2>
 <p> <%= @challenge.user.location %></p>
@@ -21,6 +35,7 @@
   Buddy Up
 </button>
     <br>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

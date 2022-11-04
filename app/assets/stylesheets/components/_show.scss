@@ -1,0 +1,43 @@
+.container-show {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.buddy-info {
+  background-color: white;
+  border-radius: 8px;
+  height: 220px;
+  width: 220px;
+
+}
+
+.buddy-name-place {
+
+  h4 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.buddy-reason {
+  padding: 20px;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.buddy-bio {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.buddy-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
