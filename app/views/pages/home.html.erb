@@ -17,18 +17,18 @@
   </div>
 
 <div class="container mt-4">
-  <div class="cards-list">
-  <% @challenges.each do |challenge| %>
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="p-3">
-       <div class="d-flex justify-content-between mb-2">
-          <div class="card-footer">
-            <h2><%= challenge.title %></h2>
-            <p><%= challenge.category %></p>
-          </div>
+  <div class="cards">
+    <% @challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge) do %>
+        <div class="card-product">
+            <%= image_tag(challenge.title) %>
+            <div class="card-product-infos">
+              <h2> <%= challenge.title %></h2>
+              <p> <%= challenge.duration %></p>
+              <p> <%= challenge.user.location %></p>
+            </div>
         </div>
-       </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
 </div>
