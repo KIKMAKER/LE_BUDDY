@@ -24,7 +24,7 @@
   <div class="buddy-bio">
     <p> <strong>Bio:</strong> <%= @challenge.user.bio %><p>
   </div>
-  <% if current_user =! @challenge.user %>
+  <% if current_user != @challenge.user %>
   <div class="buddy-up">
     <button type="button" class="btn btn-buddy" data-bs-toggle="modal" data-bs-target="#exampleModal">Buddy Up</button>
   </div>
@@ -47,7 +47,7 @@
 
         <%= simple_form_for [@challenge, @booking] do |f| %>
         <%= f.input :comment %>
-        <%= f.button :submit %>
+        <%= f.button :submit, class: "btn btn-buddy"%>
         <% end %>
       </div>
     </div>

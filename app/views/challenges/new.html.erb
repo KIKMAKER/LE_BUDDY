@@ -6,7 +6,7 @@
   <%= f.input :title, :label => 'LeWagon Module', :collection => ['Ruby', 'OOP', 'DB', 'Front', 'Rails'] %>
   <%= f.input :description, :label => "Describe your difficuity with this challenge" %>
   <%= f.input :duration, :label => "Work on a single Challenge, Full Day of challenges or an entire Module?", :collection => ['Challenge', 'Full Day', 'Module'] %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn-buddy" %>
   <% end %>
   </div>
 </div>
