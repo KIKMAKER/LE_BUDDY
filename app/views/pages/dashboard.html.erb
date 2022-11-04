@@ -2,72 +2,98 @@
 <div class="container">
   <div class="justify-content-center mt-4" >
     <div class="card-dashboard p-5">
-      <h1>YOUR DASHBOARD</h1>
-      <h2>Hey <%= @user.username %></h2>
-      <div class="d-flex flex-column justify-content-center my-10 p-4">
-        <div class="row">
-          <div class= "col">
-            <h4>Posted Challenges</h4>
-              <% @user.challenges.each do |challenge| %>
-                <%= link_to challenge_path(challenge) do %>
-                  <p><%= challenge.title %></p>
-                <% end %>
-              <% end %>
-          </div>
+      <div class="text-center dash-head">
+        <h2>Hey there, <%= @user.username %></h2>
+        <h1>YOUR DASHBOARD</h1>
+      </div>
 
+<ul class="nav nav-pills mb-3 mt-4 justify-content-around" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active nav-red" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Posted Challenges</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link nav-red" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Challenge Requests</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link nav-red" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Buddy Requests</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
 
+              <%# posted %>
 
-          <div class= "col">
-            <h4>Your Challenge requests</h4>
-              <% @user.bookings.each do |booking| %>
-                <%= link_to challenge_path(booking.challenge) do %>
-                  <h5><%= booking.challenge.title %></h5>
-                <% end %>
-                  <p>status: <%= booking.status %></p>
-              <% end %>
-          </div>
-
-
-
-          <div class= "col">
-            <h4>Your Future Buddy requests</h4>
-            <h5>Respond to these:</h5>
-            <% if @user.requests.pending.empty? %>
-            <p>You don't have any pending buddy-up requests.</p>
-            <% else %>
-              <% @user.requests.pending.each do |request| %>
-                <%= link_to challenge_path(request.challenge) do %>
-                  <p><%= request.challenge.title %></p>
-                <% end %>
-                <p><%= link_to "Accept", accept_booking_path(request), data: {turbo_method: :patch} %> | <%= link_to "Decline", decline_booking_path(request), data: {turbo_method: :patch} %></p>
-              <% end %>
-            <% end %>
-
-              <h5>Get excited to work on these:</h5>
-            <% @user.requests.accepted.each do |request| %>
-              <%= link_to challenge_path(request.challenge) do %>
-                <p><%= request.challenge.title %></p>
-              <% end %>
-
-              <%= link_to 'Start Chat', challenge_conversations_path(request.challenge), data: {turbo_method: :post}, class: 'btn btn-buddy'  %>
-            <% end %>
-
-            <h5>The ones you didn't get to work on:</h5>
-            <% @user.requests.declined.each do |request| %>
-              <%= link_to challenge_path(request.challenge) do %>
-                <p><%= request.challenge.title %></p>
-              <% end %>
-            <% end %>
-      <%#
-            <button>  <%= link_to challenge_path(@challenge),
-                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                  <%# <i class="fa-solid fa-trash"></i> %>
-                  <%# <% end %>
-            <%# </button> %>
-
-          </div>
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <% @user.challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge), class:"text-decoration-none text-dark" do %>
+        <div class="card-profile">
+        <%= image_tag  "#{challenge.title}.png" %>
+        <div class="card-profile-infos">
+          <h2><%= challenge.title %></h2>
+          <p><%= challenge.description %></p>
         </div>
       </div>
+      <% end %>
+    <% end %>
+  </div>
+
+<%# requests %>
+
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <% @user.bookings.pending.each do |booking| %>
+      <%= link_to challenge_path(booking.challenge), class:"text-decoration-none text-dark" do %>
+        <div class="card-profile">
+          <%= image_tag  "#{booking.challenge.title}.png" %>
+          <div class="card-profile-infos">
+            <h2><%= booking.challenge.title %></h2>
+            <p>your potential buddy: <%= booking.challenge.user.username %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+    <h5 class="mb-3 mt-3">Respond to these:</h5>
+    <% if @user.requests.pending.empty? %>
+      <p>You don't have any pending buddy-up requests.</p>
+    <% else %>
+      <% @user.requests.pending.each do |request| %>
+        <%= link_to challenge_path(request.challenge), class:"text-decoration-none text-dark" do %>
+          <div class="card-profile">
+            <%= image_tag  "#{request.challenge.title}.png" %>
+            <div class="card-profile-infos">
+              <h2><%= request.challenge.title %> from <%= request.challenge.user.username %></h2>
+              <p><%= link_to "Accept", accept_booking_path(request), data: {turbo_method: :patch} %> | <%= link_to "Decline", decline_booking_path(request), data: {turbo_method: :patch} %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <h5 class="mb-3 mt-3">Get excited to work on these:</h5>
+    <% @user.requests.accepted.each do |request| %>
+      <%= link_to challenge_path(request.challenge), class:"text-decoration-none text-dark" do %>
+          <div class="card-profile chat-card">
+            <%= image_tag  "#{request.challenge.title}.png" %>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="card-profile-infos flex-grow mr-5">
+                <h2><%= request.challenge.title %> from <%= request.challenge.user.username %></h2>
+              </div>
+              <div class="chat-button">
+                <%= link_to 'Start Chat', challenge_conversations_path(request.challenge), data: {turbo_method: :post}, class: 'btn btn-buddy'  %>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+                            <%# comment on which section this is %>
+
+
     </div>
   </div>
 </div>

@@ -1,15 +1,15 @@
-.cards  a{
-  text-decoration: none!important;
+.cards a {
+  text-decoration: none !important;
 }
 
-.cards  a:hover{
+.cards a:hover {
   color: #e60f05;
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
 
@@ -27,11 +27,10 @@
 
 .card-trip p {
   font-size: 12px;
-  opacity: .7;
+  opacity: 0.7;
   margin: 0;
   // text-align: right;
 }
-
 
 .card-trip .card-trip-infos {
   padding: 25px;
@@ -129,7 +128,7 @@
 .card-product p {
   font-size: 15px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 15px;
   margin-top: 8px;
 }
@@ -140,7 +139,6 @@
 }
 
 .card-title-duration {
-
   p {
     font-size: 15px;
   }
@@ -159,4 +157,75 @@
   padding: 15px;
 }
 
+.card-profile {
+  overflow: hidden;
+  height: 90px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-decoration: none !important;
+}
 
+.card-profile img {
+  height: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+
+.card-profile h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-profile p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-profile .card-profile-infos {
+  padding: 16px;
+  h2 {
+    text-decoration: none !important;
+  }
+
+  p {
+    text-decoration: none !important;
+  }
+}
+
+.card-profile-infos {
+  h2 {
+    text-decoration: none;
+  }
+
+  p {
+    text-decoration: none;
+  }
+}
+
+.dash-head {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+
+.chat-card {
+  position: relative;
+}
+
+.chat-button {
+  position: absolute;
+  right: 20px;
+}
