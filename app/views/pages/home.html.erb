@@ -35,7 +35,7 @@
       <% @challenges.each do |challenge| %>
         <%= link_to challenge_path(challenge) do %>
           <div class="card-product">
-              <%= image_tag(challenge.title) %>
+              <%= image_tag  "#{challenge.title}.png" %>
               <div class="card-product-infos">
                 <div class="card-product-text d-flex justify-content-between align-items-end">
                   <div class="card-title-duration margin-bottom: 10px">
