@@ -10,6 +10,15 @@ class ChallengesController < ApplicationController
   def show
     @challenge = Challenge.find(params[:id])
     @booking = Booking.new
+
+    @user = @challenge.user
+
+    # @marker = @user.geocoded.map do |user|
+    #   {
+    #     lat: user.latitude,
+    #     lng: user.longitude,
+    # }
+    # end
   end
 
   def new

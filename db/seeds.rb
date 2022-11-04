@@ -11,6 +11,7 @@ user1 = User.create(
   email: "cwamono@gmail.com",
   password: 'user100',
   location: 'Paris',
+  batch_number: "#989",
   bio: "I have worked as a fashion and commercial model, and movement instructor.
         My love for technology, the internet, creating blogs and interest in SEO led me to want to learn how to code and more.
         I plan on starting a tech company in the future.",
@@ -24,6 +25,7 @@ user2 = User.create(
   email: "cheekylilkiki@gmail.com",
   password: 'user200',
   location: 'Cape Town',
+  batch_number: "#989",
   bio: "I'm Kiki, I'm on to about my third career path now so writing a bio is kind of tricky.
         My background is environment and climate change but I've worked as a project manager, a copy editor and a proofreader.
         I love to get stuck into a project or a puzzle and finding out a more efficient way to do something makes me weak at the knees.",
@@ -37,6 +39,7 @@ user3 = User.create(
   email: "specialc@gmail.com",
   password: 'user300',
   location: 'Rio',
+  batch_number: "#977",
   bio: "Loafing around...",
   github: "ch0rizo",
   latitude: -22.906847,
@@ -60,6 +63,7 @@ user5 = User.create(
   email: "jumpingjoe@gmail.com",
   password: 'user500',
   location: 'London',
+  batch_number: "#959",
   bio: "So I was previously working as a bricklayer for the past 13 years and started taking an interest in computers
         when covid hit and we were all locked away. I started looking into designing websites and joined a codecademy course
         but after finishing that i felt like i needed to take my learning to the next level so i started looking into
@@ -74,6 +78,7 @@ user6 = User.create(
   email: "gabriella@gmail.com",
   password: 'user600',
   location: 'Hong Kong',
+  batch_number: "#966",
   bio: "Photographer and buyer. Wanting to learn web development to create cool websites for aspiring business ideas.",
   github: "gabirein",
   latitude: 22.32326710206436,
@@ -85,6 +90,7 @@ user7 = User.create(
   email: "domwalsh@gmail.com",
   password: 'user700',
   location: 'Barcelona',
+  batch_number: "#989",
   bio: " Hey, i'm Dom! I'm 28 years old, from Cape Town, but have been living in Barcelona the last 3 years.
          Health fanatic, nature lover, armchair philosopher probably best describe me as a human.
          My background is in holistic health, but this course marks the start of a new chapter! Incredibly stoked to dive into the field of web development, learn new skills, and hopefully form some great friendships in the process.",
@@ -98,6 +104,7 @@ user8 = User.create(
   email: "tracys@gmail.com",
   password: 'user800',
   location: 'London',
+  batch_number: "#920",
   bio: "Passionate about facilitating the creative process and connecting people to the skills, knowledge and services that they want or need.
         Offering a wide variety of creative and innovative expertise in various industries including education, technology, science, art and more.",
   github: "tracysik",
@@ -110,6 +117,7 @@ user9 = User.create(
   email: "joedrey@gmail.com",
   password: 'user900',
   location: 'Sydney',
+  batch_number: "#989",
   bio: "Hello! I am South African, born in Cape Town.
        Been living in Australia (Sydney) for the past 5 years, owned my own removals company. Was an incredible experience however I am now looking to upskill myself and dive into the programming world as I feel it is an important aspect of commerce and business in general. Excited for the course!",
   github: "JOEDREYER",
@@ -122,6 +130,7 @@ user10 = User.create(
   email: "tudoroj@gmail.com",
   password: 'user1000',
   location: 'Seol',
+  batch_number: "#920",
   bio: "What's up everyone, I'm Tudor! I'm a Romanian Dutch national with a BSc in business administration and hospitality management.
         I've worked in four countries, embarked on entrepreneurial endeavors like co-founding a tattoo & barber concept shop in Holland and a high-end European food import business in Zimbabwe.
         I'm always up for some traveling, adventure and meeting open minded folks.",
@@ -135,6 +144,7 @@ user11 = User.create(
   email: "wiconico@gmail.com",
   password: 'user1100',
   location: 'Hamberg',
+  batch_number: "#939",
   bio: "Just finished school in Hamburg, Germany. Now about to join Le Wagon, for the Web-Development course in Cape Town.
         After the course i'm starting to study in London and planning on working in an Web-Development company (part Time).",
   github: "nicowkm",
@@ -150,18 +160,11 @@ user12 = User.create(
         I want to expand my technical know-how and have oversight of the development teams that I manage.",
   github: "ticklemeexcited",
   location: 'Hamburg',
+  batch_number: "#984",
   latitude: 53.59592270766032,
   longitude: 10.013470956527115
 )
 
-user12 = User.create(
-  username: "Rogue Roux",
-  email: "rudeboi@gmail.com",
-  password: 'user1200',
-  location: 'Berlin',
-  latitude: 52.535341807779815,
-  longitude: 13.40822904753448
-)
 
 puts 'Creating Challenges...'
 
