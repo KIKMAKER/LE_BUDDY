@@ -1,5 +1,5 @@
 <div class="container chatroom" data-controller="conversation-subscription" data-conversation-subscription-conversation-id-value="<%= @conversation.id %>" >
-  <h1>#<%= @conversation.challenge.title %> with </h1>
+  <h1>#<%= @conversation.challenge.title %></h1>
 
   <div class="messages" data-conversation-subscription-target="messages">
     <% @conversation.messages.each do |message| %>
@@ -17,7 +17,7 @@
     placeholder: "Message ##{@conversation.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+  <%= f.submit " Send  ", class: 'btn btn-buddy' %>
 <% end %>
 
 </div>
