@@ -1,13 +1,10 @@
-
-
-
 <div class="container m-4 p-4 justify-content-center card-trip ">
 <h1>The Buddy for this challenge is: <%= @challenge.user.username %></h1>
 <div>
 <% if @challenge.user.avatar.attached? %>
-<%= cl_image_tag @challenge.user.avatar.key %>
+<%= cl_image_tag @challenge.user.avatar.key, class: "avatar-large"%>
 <% else %>
-<img class = "avatar" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
+ <img class = "avatar-large" src="https://kitt.lewagon.com/placeholder/users/<%=@challenge.user.github%>" />
 <% end %>
 </div>
 <br>
@@ -43,5 +40,4 @@
     </div>
   </div>
 </div>
-
 </div>
