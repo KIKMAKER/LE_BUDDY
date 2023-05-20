@@ -1,5 +1,5 @@
 class ConversationChannel < ApplicationCable::Channel
-  ApplicationCable::Channel
+
   def subscribed
     conversation =
     Conversation.find(params[:id])
