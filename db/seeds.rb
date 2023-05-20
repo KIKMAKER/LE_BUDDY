@@ -1,6 +1,9 @@
 require 'faker'
 
 puts 'Clearing Database...'
+Message.destroy_all
+Conversation.destroy_all
+Booking.destroy_all
 Challenge.destroy_all
 User.destroy_all
 
