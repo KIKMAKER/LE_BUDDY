@@ -258,8 +258,6 @@ challenge12 = Challenge.create(
   user_id: User.all.sample.id
 )
 
-p Challenge.last
-
 puts "Finished!"
 
 puts "#{User.count} users created, and #{Challenge.count} challenges created"
