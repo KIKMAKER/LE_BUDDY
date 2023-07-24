@@ -1,5 +1,5 @@
 class Challenge < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user #, dependent: :destroy
   has_many :bookings
 
   validates :title, presence: true
